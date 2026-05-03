@@ -1,0 +1,8 @@
+First Ping Observation:
+When PC0 pings PC1 for the first time, an ARP request is sent as a broadcast to find the MAC address of PC1. PC1 replies with its MAC address using ARP reply. After ARP resolution, ICMP echo request and echo reply packets are exchanged.
+
+Second Ping Observation:
+During the second ping, ARP is not required because the MAC address is already stored in the ARP cache. Only ICMP echo request and reply packets are observed, resulting in faster communication.
+
+MAC Learning:
+The switch learns MAC addresses by observing the source MAC of incoming frames and stores them in the MAC address table along with corresponding ports.
